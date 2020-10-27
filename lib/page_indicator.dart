@@ -35,6 +35,9 @@ class _PageIndicatorState extends State<PageIndicator> {
 
   @override
   Widget build(BuildContext context) {
+    // 对于不合理参数，返回 SizedBox()
+    if (widget.initPage < 1 || widget.pageNum < 1) return const SizedBox();
+
     final viewList = [];
 
     // 当页面数量大于最大条目时，按当前页面情况展示
