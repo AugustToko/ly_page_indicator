@@ -84,7 +84,7 @@ class _PageIndicatorState extends State<PageIndicator> {
       }
     } else {
       // 当页面数量少于最大条目时，直接展示
-      viewList.addAll(List.generate(MAX_INDICATOR_NUM, (index) {
+      viewList.addAll(List.generate(widget.pageNum, (index) {
         return buildPageText(index + 1);
       }));
     }
